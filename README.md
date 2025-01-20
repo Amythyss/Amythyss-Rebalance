@@ -20,12 +20,12 @@ Given what I stated previously:[^1]
 ## I spotted a bug!
 Good catch! Now there are two possible paths:
 - Create a branch, update my code and then make a pull request.
-- Create a [Bug Report](https://github.com/riddemon/Riddemons-Rebalance/issues) and try to explain the issue to the best of your capabilities.
+- Create a [Bug Report](https://github.com/Amythyss/Amythyss-Rebalance/issues) and try to explain the issue to the best of your capabilities.
 Thank you.
 
 ## You removed a feature I liked!
 I am really sorry for removing a feature you liked, you can create a mod to add it back by:
-- Using my old code (You are required to follow the [License](https://github.com/riddemon/Riddemons-Rebalance?tab=License-1-ov-file#readme)).
+- Using my old code (You are required to follow the [License](https://github.com/Amythyss/Amythyss-Rebalance?tab=License-1-ov-file#readme)).
 - Coding it in yourself.
 
 ## Someone cloned your mod and is taking credit for it.
@@ -43,4 +43,4 @@ This may be for an extensive number of reasons. Here's what you can do:
 - Wait and hope.
 
 [^1]: This is a collection of mods originally meant for personal use only.
-[^2]: https://github.com/riddemon/Riddemons-Rebalance?tab=License-1-ov-file#readme
+[^2]: https://github.com/Amythyss/Amythyss-Rebalance?tab=License-1-ov-file#readme
