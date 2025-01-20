@@ -28,7 +28,7 @@ tech_repeatable_improved_leader_cap = {
 	}
 }
 
-tech_RD_RR_LessNegativeLeaders = {
+tech_AT_AR_LessNegativeLeaders = {
 	area = society
 	cost = @repeatableTechBaseCost
 	cost_per_level = @repeatableTechLevelCost
