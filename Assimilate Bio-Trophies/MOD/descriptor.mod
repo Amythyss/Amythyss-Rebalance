@@ -1,4 +1,4 @@
-name="Riddemon's Rebalance - Assimilate Bio-Trophies"
+name="Amythyss' Rebalance - Assimilate Bio-Trophies"
 picture="thumbnail.png"
 tags={
 	"Species"

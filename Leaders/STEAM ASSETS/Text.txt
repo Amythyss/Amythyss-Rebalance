@@ -1,5 +1,5 @@
 ===TITLE===
-Riddemon's Rebalance - Leaders
+Amythyss' Rebalance - Leaders
 
 ===DESCRIPTION===
 
@@ -76,5 +76,5 @@ I am sorry if it does not follow yours (or someone else's) but there will be no 
 
 [h1]Links[/h1]
 [table][tr]
-  [td][url=https://github.com/riddemon/Riddemons-Rebalance][img]https://github.githubassets.com/favicons/favicon-dark.png[/img][/url][/td]
+  [td][url=https://github.com/Amythyss/Amythyss-Rebalance][img]https://github.githubassets.com/favicons/favicon-dark.png[/img][/url][/td]
 [/tr][/table]

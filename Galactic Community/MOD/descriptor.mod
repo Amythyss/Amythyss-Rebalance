@@ -1,4 +1,4 @@
-name="Riddemon's Rebalance - Galactic Community"
+name="Amythyss' Rebalance - Galactic Community"
 picture="thumbnail.png"
 tags={
 	"Diplomacy"

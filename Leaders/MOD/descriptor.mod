@@ -1,4 +1,4 @@
-name="Riddemon's Rebalance - Leaders"
+name="Amythyss' Rebalance - Leaders"
 picture="thumbnail.png"
 tags={
 	"Balance"
