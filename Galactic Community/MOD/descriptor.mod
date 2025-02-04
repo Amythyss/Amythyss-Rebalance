@@ -4,5 +4,5 @@ tags={
 	"Diplomacy"
 	"Gameplay"
 }
-supported_version="v3.13.1"
+supported_version="v3.14.15926"
 remote_file_id="3190515256"
