@@ -26,12 +26,12 @@ orbital_ring_ruined = {
 
 	on_dismantle_start = {
     fromfrom.planet = {
-      set_planet_flag = flag_RD_RR_dismantling
-      planet_event = { id = event_RD_RR_dismantling.1 days = 361 }
+      set_planet_flag = flag_AT_AR_dismantling
+      planet_event = { id = event_AT_AR_dismantling.1 days = 361 }
     }
   }
 	on_dismantle_cancel = {
-    fromfrom.planet = { remove_planet_flag = flag_RD_RR_dismantling }
+    fromfrom.planet = { remove_planet_flag = flag_AT_AR_dismantling }
   }
 	on_dismantle_complete = {
 		from = {

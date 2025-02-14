@@ -1,6 +1,6 @@
 ### CRIMINAL ###
 
-trait_RD_RR_L_criminal = {
+trait_AT_AR_L_criminal = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -117,7 +117,7 @@ trait_RD_RR_L_criminal = {
 	leader_class = { official }
 }
 
-trait_RD_RR_L_criminal_2 = {
+trait_AT_AR_L_criminal_2 = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official

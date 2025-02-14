@@ -1,4 +1,4 @@
-district_RD_RR_replicator = {
+district_AT_AR_replicator = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 

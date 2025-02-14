@@ -1,6 +1,6 @@
 ### COMMANDERS ###
 
-trait_RD_RR_L_Training_admiral = {
+trait_AT_AR_L_Training_admiral = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -27,8 +27,8 @@ trait_RD_RR_L_Training_admiral = {
 	leader_class = { commander }
 }
 
-trait_RD_RR_L_Training_admiral_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_admiral" }
+trait_AT_AR_L_Training_admiral_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_admiral" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -46,7 +46,7 @@ trait_RD_RR_L_Training_admiral_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_general = {
+trait_AT_AR_L_Training_general = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -76,8 +76,8 @@ trait_RD_RR_L_Training_general = {
 	leader_class = { commander }
 }
 
-trait_RD_RR_L_Training_general_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_general" }
+trait_AT_AR_L_Training_general_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_general" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -97,7 +97,7 @@ trait_RD_RR_L_Training_general_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_CommanderGovernor = {
+trait_AT_AR_L_Training_CommanderGovernor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -122,8 +122,8 @@ trait_RD_RR_L_Training_CommanderGovernor = {
 	leader_class = { commander }
 }
 
-trait_RD_RR_L_Training_CommanderGovernor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_CommanderGovernor" }
+trait_AT_AR_L_Training_CommanderGovernor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_CommanderGovernor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -142,7 +142,7 @@ trait_RD_RR_L_Training_CommanderGovernor_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_CommanderCouncilor = {
+trait_AT_AR_L_Training_CommanderCouncilor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -173,8 +173,8 @@ trait_RD_RR_L_Training_CommanderCouncilor = {
 	leader_class = { commander }
 }
 
-trait_RD_RR_L_Training_CommanderCouncilor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_CommanderCouncilor" }
+trait_AT_AR_L_Training_CommanderCouncilor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_CommanderCouncilor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = commander
@@ -196,7 +196,7 @@ trait_RD_RR_L_Training_CommanderCouncilor_2 = {
 
 ### OFFICIALS ###
 
-trait_RD_RR_L_Training_delegate = {
+trait_AT_AR_L_Training_delegate = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -218,8 +218,8 @@ trait_RD_RR_L_Training_delegate = {
 	leader_class = { official }
 }
 
-trait_RD_RR_L_Training_delegate_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_delegate" }
+trait_AT_AR_L_Training_delegate_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_delegate" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -238,7 +238,7 @@ trait_RD_RR_L_Training_delegate_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_OfficialGovernor = {
+trait_AT_AR_L_Training_OfficialGovernor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -261,8 +261,8 @@ trait_RD_RR_L_Training_OfficialGovernor = {
 	leader_class = { official }
 }
 
-trait_RD_RR_L_Training_OfficialGovernor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_OfficialGovernor" }
+trait_AT_AR_L_Training_OfficialGovernor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_OfficialGovernor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -283,7 +283,7 @@ trait_RD_RR_L_Training_OfficialGovernor_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_OfficialDiplomacyCouncilor = {
+trait_AT_AR_L_Training_OfficialDiplomacyCouncilor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -312,8 +312,8 @@ trait_RD_RR_L_Training_OfficialDiplomacyCouncilor = {
 	leader_class = { official }
 }
 
-trait_RD_RR_L_Training_OfficialDiplomacyCouncilor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_OfficialDiplomacyCouncilor" }
+trait_AT_AR_L_Training_OfficialDiplomacyCouncilor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_OfficialDiplomacyCouncilor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -333,7 +333,7 @@ trait_RD_RR_L_Training_OfficialDiplomacyCouncilor_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_OfficialEconomyCouncilor = {
+trait_AT_AR_L_Training_OfficialEconomyCouncilor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -364,8 +364,8 @@ trait_RD_RR_L_Training_OfficialEconomyCouncilor = {
 	leader_class = { official }
 }
 
-trait_RD_RR_L_Training_OfficialEconomyCouncilor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_OfficialEconomyCouncilor" }
+trait_AT_AR_L_Training_OfficialEconomyCouncilor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_OfficialEconomyCouncilor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -388,7 +388,7 @@ trait_RD_RR_L_Training_OfficialEconomyCouncilor_2 = {
 
 ### SCIENTIST ###
 
-trait_RD_RR_L_Training_explorer = {
+trait_AT_AR_L_Training_explorer = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -408,8 +408,8 @@ trait_RD_RR_L_Training_explorer = {
 	leader_class = { scientist }
 }
 
-trait_RD_RR_L_Training_explorer_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_explorer" }
+trait_AT_AR_L_Training_explorer_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_explorer" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -426,7 +426,7 @@ trait_RD_RR_L_Training_explorer_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_scholar = {
+trait_AT_AR_L_Training_scholar = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -447,8 +447,8 @@ trait_RD_RR_L_Training_scholar = {
 	leader_class = { scientist }
 }
 
-trait_RD_RR_L_Training_scholar_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_scholar" }
+trait_AT_AR_L_Training_scholar_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_scholar" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -466,7 +466,7 @@ trait_RD_RR_L_Training_scholar_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_ScientistGovernor = {
+trait_AT_AR_L_Training_ScientistGovernor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -492,8 +492,8 @@ trait_RD_RR_L_Training_ScientistGovernor = {
 	leader_class = { scientist }
 }
 
-trait_RD_RR_L_Training_ScientistGovernor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_ScientistGovernor" }
+trait_AT_AR_L_Training_ScientistGovernor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_ScientistGovernor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -516,7 +516,7 @@ trait_RD_RR_L_Training_ScientistGovernor_2 = {
 	ai_weight = 100
 }
 
-trait_RD_RR_L_Training_ScientistCouncilor = {
+trait_AT_AR_L_Training_ScientistCouncilor = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -546,8 +546,8 @@ trait_RD_RR_L_Training_ScientistCouncilor = {
 	leader_class = { scientist }
 }
 
-trait_RD_RR_L_Training_ScientistCouncilor_2 = {
-	replace_traits = { "trait_RD_RR_L_Training_ScientistCouncilor" }
+trait_AT_AR_L_Training_ScientistCouncilor_2 = {
+	replace_traits = { "trait_AT_AR_L_Training_ScientistCouncilor" }
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist

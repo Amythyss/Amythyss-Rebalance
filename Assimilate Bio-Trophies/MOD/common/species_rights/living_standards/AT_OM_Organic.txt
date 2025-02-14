@@ -1,4 +1,4 @@
-LivingStandard_RD_RR_OM_TrophyMerge = {
+LivingStandard_AT_AR_OM_TrophyMerge = {
 	# intentionally no happiness bonus - gene-therapy is uncomfortable
 	# duplicates pop_modifier from living_standard_organic_trophy
 

@@ -1,4 +1,4 @@
-name="Riddemon's Rebalance - General Changes"
+name="Amythyss' Rebalance - General Changes"
 picture="thumbnail.png"
 tags={
 	"Balance"

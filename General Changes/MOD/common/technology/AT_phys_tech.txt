@@ -1,4 +1,4 @@
-tech_RD_RR_ExtraDimensionalConstruction = {
+tech_AT_AR_ExtraDimensionalConstruction = {
 	area = physics
 	cost = @repeatableTechBaseCost
 	cost_per_level = @repeatableTechLevelCost

@@ -1,4 +1,4 @@
 # this = country
 on_yearly_pulse_country = {
-	events = { event_RD_RR_OM_merge.1 }
+	events = { event_AT_AR_OM_merge.1 }
 }
