@@ -1,0 +1,10 @@
+According to the Paradox Development Studios' "User Modding Rules of PDS Games" I cannot license this code (point 4).
+
+> The User Mod may not include ANY kind of license or claim of copyright distributed with the mod (You may have a Credits section).
+  Source: https://forum.paradoxplaza.com/forum/threads/updated-14-06-18-rules-for-user-made-mods-and-edits-of-pds-games.708039/
+
+Therefore, since Github defines a repository with no license as 'covered by Copyright law', the license file of this code is used to define this code as NOT covered by any license or Copyright.
+
+Having discussed Copyright and license, Paradox Development Studios also removes reuploads. Therefore you are required to:
+- State any changes (if any) to my code.
+- Give me credit for the source (original) code.
