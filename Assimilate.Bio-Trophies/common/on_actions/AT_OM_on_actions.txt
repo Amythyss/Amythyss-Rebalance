@@ -1,0 +1,10 @@
+# this = country
+on_yearly_pulse_country = {
+	events = { event_AT_AR_OM_merge.1 }
+}
+
+on_tech_increased = {
+	events = {
+		event_AT_AR_OM_merge.2
+	}
+}

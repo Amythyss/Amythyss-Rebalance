@@ -1,0 +1,161 @@
+namespace = event_AT_AR_OM_merge
+
+country_event = {
+	id = event_AT_AR_OM_merge.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		# Counts if there are any pops to merge
+		count_owned_pop_amount = {
+			limit = {
+				has_living_standard = {
+					type = LivingStandard_AT_AR_OM_TrophyMerge
+					country = root
+				}
+			}
+			count > 0
+		}
+	}
+	immediate = {
+		# Select Main Biotrophy species (to exclude)
+		ordered_owned_pop_species = {
+			limit = {
+				NOT = { is_same_species = root.owner_species }
+				home_planet = { is_planet = root.owner_species.home_planet }
+				is_robotic = no
+			}
+			order_by = trigger:num_trait_points
+			position = 0
+			save_event_target_as = EventTarget_AT_AR_OM_MainTrophySpecies
+		}
+		every_owned_planet = {
+			limit = {
+				any_owned_species = {
+					has_living_standard = {
+						type = LivingStandard_AT_AR_OM_TrophyMerge
+						country = root
+					}
+				}
+			}
+			random_list = {
+                1 = { # 300 * x + 300 pops
+                     set_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 300
+                    }
+                    multiply_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        # Scope is Planet but variable is attached to country
+                        value = owner.variable_AT_AR_OM_ExtraConvert
+                    }
+                    change_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 300
+                    }
+                }
+                1 = { # 600 * x + 600 pops
+                     set_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 600
+                    }
+                    multiply_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        # Scope is Planet but variable is attached to country
+                        value = owner.variable_AT_AR_OM_ExtraConvert
+                    }
+                    change_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 600
+                    }
+                }
+                1 = { # 1200 * x + 1200 pops
+                     set_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 1200
+                    }
+                    multiply_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        # Scope is Planet but variable is attached to country
+                        value = owner.variable_AT_AR_OM_ExtraConvert
+                    }
+                    change_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 1200
+                    }
+                }
+			}
+			# pick a species to merge
+			while = {
+				count = variable_AT_AR_OM_MergeMaximum
+				limit = {
+					check_variable = {
+						which = variable_AT_AR_OM_MergeMaximum
+						value > 0
+					}
+					any_owned_pop_group = {
+						has_living_standard = {
+							type = LivingStandard_AT_AR_OM_TrophyMerge
+							country = root
+						}
+					}
+				}
+				# similar to assimilation, this prefers to process as many of the same species as possible before re-randomizing
+				weighted_random_owned_pop_group = {
+					limit = {
+						has_living_standard = {
+							type = LivingStandard_AT_AR_OM_TrophyMerge
+							country = root
+						}
+					}
+					species = { save_event_target_as = EventTarget_AT_AR_OM_MergingSpecies }
+					change_species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies
+					set_living_standard = {
+						type = living_standard_organic_trophy
+						country = owner
+					}
+					planet = {
+						change_variable = {
+							which = variable_AT_AR_OM_MergeMaximum
+							value = -1
+						}
+						#pick a pop to merge within above species
+						while = {
+							limit = {
+								check_variable = {
+									which = variable_AT_AR_OM_MergeMaximum
+									value > 0
+								}
+								any_owned_pop_group = { is_exact_same_species = event_target:EventTarget_AT_AR_OM_MergingSpecies }
+							}
+							weighted_random_owned_pop_group = {
+								limit = { is_exact_same_species = event_target:EventTarget_AT_AR_OM_MergingSpecies }
+								change_species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies
+								set_living_standard = {
+									type = living_standard_organic_trophy
+									country = owner
+								}
+								planet = {
+									change_variable = {
+										which = variable_AT_AR_OM_MergeMaximum
+										value = -1
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			clear_variable = variable_AT_AR_OM_MergeMaximum
+		}
+	}
+}
+
+country_event = {
+	id = event_AT_AR_OM_merge.2
+	hide_window = yes 
+	is_triggered_only = yes
+
+	trigger = { last_increased_tech = tech_AT_OM_MergeMoreTrophies }
+
+	immediate = { change_variable = { which = variable_AT_AR_OM_ExtraConvert value = 1 } }
+}
