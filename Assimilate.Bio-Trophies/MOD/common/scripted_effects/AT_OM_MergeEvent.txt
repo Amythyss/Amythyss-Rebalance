@@ -1,0 +1,20 @@
+MergePops = {
+    #
+    if = {
+        limit = { pop_group_size > planet.variable_AT_AR_OM_MergeMaximum }
+        set_variable = {which = variable_AT_AR_OM_kill_amount value = planet.variable_AT_AR_OM_MergeMaximum}
+    }
+    # 
+    else {
+        set_variable = { which = variable_AT_AR_OM_kill_amount value = trigger:pop_group_size}
+    }
+    # Begin Assimilation
+    planet = {
+        create_pop_group = { size = prev.variable_AT_AR_OM_kill_amount species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies }
+        subtract_variable = { which = variable_AT_AR_OM_MergeMaximum value = prev.variable_AT_AR_OM_kill_amount }
+    }
+    kill_pop_group = { pop_group = this amount = variable_AT_AR_OM_kill_amount }
+    
+    # Kill_amount is 0
+    clear_variable = variable_AT_AR_OM_kill_amount
+}
