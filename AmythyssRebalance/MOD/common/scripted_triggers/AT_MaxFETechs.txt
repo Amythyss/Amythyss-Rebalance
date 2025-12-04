@@ -1,0 +1,37 @@
+trigger_AT_AR_CountMaxFeTechs = {
+    calc_true_if = {
+        amount >= 6
+        has_technology = tech_fe_market_1
+        has_technology = tech_fe_market_2
+        has_technology = tech_fe_nourishment_1
+        has_technology = tech_fe_nourishment_2
+        has_technology = tech_fe_mine_1
+        has_technology = tech_fe_mine_2
+        has_technology = tech_fe_singularity_1
+        has_technology = tech_fe_singularity_2
+        has_technology = tech_fe_fabricator_1
+        has_technology = tech_fe_fabricator_2
+        has_technology = tech_fe_affluence_1
+        has_technology = tech_fe_affluence_2
+        has_technology = tech_fe_forge_1
+        has_technology = tech_fe_forge_2
+        has_technology = tech_fe_dome_1
+        has_technology = tech_fe_dome_2
+        has_technology = tech_fe_entertainment_1
+        has_technology = tech_fe_entertainment_2
+        has_technology = tech_fe_fortress_1
+        has_technology = tech_fe_fortress_2
+        has_technology = tech_fe_security_1
+        has_technology = tech_fe_security_2
+        has_technology = tech_fe_administration_1
+        has_technology = tech_fe_administration_2
+        has_technology = tech_fe_assembly_1
+        has_technology = tech_fe_assembly_2
+        has_technology = tech_fe_clinic_1
+        has_technology = tech_fe_clinic_2
+        has_technology = tech_fe_silo_1
+        has_technology = tech_fe_silo_2
+        has_technology = tech_fe_lab_1
+        has_technology = tech_fe_lab_2
+    }
+}
