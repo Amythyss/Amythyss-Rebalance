@@ -1,20 +1,23 @@
 MergePops = {
-    #
+    # variable_AT_AR_OM_MergeMaximum => how many pops are there to be killed at the beginning of the run
+    # variable_AT_AR_OM_ToKill       => how many pops are left to be killed at the end (used in case the pop group is smaller than 100)
+
+    # No problem, the pop group can be fully converted
     if = {
         limit = { pop_group_size > planet.variable_AT_AR_OM_MergeMaximum }
-        set_variable = {which = variable_AT_AR_OM_kill_amount value = planet.variable_AT_AR_OM_MergeMaximum}
+        set_variable = {which = variable_AT_AR_OM_ToKill value = planet.variable_AT_AR_OM_MergeMaximum}
     }
-    # 
+    # Pop group may not be fully converted
     else {
-        set_variable = { which = variable_AT_AR_OM_kill_amount value = trigger:pop_group_size}
+        set_variable = { which = variable_AT_AR_OM_ToKill value = trigger:pop_group_size}
     }
     # Begin Assimilation
     planet = {
-        create_pop_group = { size = prev.variable_AT_AR_OM_kill_amount species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies }
-        subtract_variable = { which = variable_AT_AR_OM_MergeMaximum value = prev.variable_AT_AR_OM_kill_amount }
+        create_pop_group = { size = prev.variable_AT_AR_OM_ToKill species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies }
+        # If pop group was smaller than the MergeMaximum, new MergeMaximum will account for that
+        subtract_variable = { which = variable_AT_AR_OM_MergeMaximum value = prev.variable_AT_AR_OM_ToKill }
     }
-    kill_pop_group = { pop_group = this amount = variable_AT_AR_OM_kill_amount }
+    kill_pop_group = { pop_group = this amount = variable_AT_AR_OM_ToKill }
     
-    # Kill_amount is 0
-    clear_variable = variable_AT_AR_OM_kill_amount
+    clear_variable = variable_AT_AR_OM_ToKill
 }
