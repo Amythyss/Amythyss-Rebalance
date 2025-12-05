@@ -1,2 +1,3 @@
 ﻿l_english:
    tr_virtuality_1_modifier_desc: "§Y$trait_robot_digital_1$§! Species Trait gains the following effects:$TABBED_NEW_LINE$- $MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!$TABBED_NEW_LINE$- Pop Upkeep: §R+0.2§! $r_energy$ per Colony"
+   trait_robot_digital_2_tt: "$trait_robot_digital_1_tt$\n$MOD_POP_BONUS_WORKFORCE_MULT$: §G+10%§!\nPop Upkeep: §R+0.2§! £energy£ §YEnergy§! per Colony"
