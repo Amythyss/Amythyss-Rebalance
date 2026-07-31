@@ -54,7 +54,7 @@ country_event = {
 			}
             set_variable = {
                 which = variable_AT_AR_OM_MergeMaximum
-                value = value:AT_AR_OM_country_pop_gene_therapy_conversion
+                value = root.value:AT_AR_OM_country_pop_gene_therapy_conversion
             }
 			random_list = {
                 # 300 * x + 300 pops

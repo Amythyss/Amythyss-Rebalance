@@ -13,11 +13,11 @@ MergePops = {
     }
     # Begin Assimilation
     colony = {
-        create_pop_group = { size = prev.variable_AT_AR_OM_ToKill species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies }
+        create_pop_group = { size = prev.variable_AT_AR_OM_ToKill species = event_target:EventTarget_AT_AR_OM_MainTrophySpecies growth_category = GROWTH_CAT_GENE_THERAPY }
         # If pop group was smaller than the MergeMaximum, new MergeMaximum will account for that
         subtract_variable = { which = variable_AT_AR_OM_MergeMaximum value = prev.variable_AT_AR_OM_ToKill }
     }
-    kill_pop_group = { pop_group = this amount = variable_AT_AR_OM_ToKill }
+    kill_pop_group = { pop_group = this amount = variable_AT_AR_OM_ToKill growth_category = GROWTH_CAT_GENE_THERAPY }
     
     clear_variable = variable_AT_AR_OM_ToKill
 }
