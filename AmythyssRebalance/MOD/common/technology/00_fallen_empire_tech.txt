@@ -19,11 +19,6 @@ tech_fe_affluence_1 = {
 			}
 		}
 		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
 			NOT = { has_crisis_level = crisis_cosmogenesis_level_5 }
 		}
@@ -56,24 +51,18 @@ tech_fe_affluence_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
+			NOR = {
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
+			}
 		}
 		modifier = {
 			factor = 0
-			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
-			}
+			country_uses_consumer_goods = no
 		}
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_enigmatic_engineering
-		}
-
-		modifier = {
-			factor = 0
-			country_uses_consumer_goods = no
 		}
 		inline_script = {
 			script = technologies/rare_technologies_weight_modifiers
@@ -99,11 +88,6 @@ tech_fe_nourishment_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_2
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -142,24 +126,14 @@ tech_fe_nourishment_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
 			factor = 1.5
 			has_ascension_perk = ap_enigmatic_engineering
-		}
-
-		modifier = {
-			factor = 0
-			country_uses_food = no
 		}
 		modifier = {
 			factor = 2
@@ -189,11 +163,6 @@ tech_fe_fabricator_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_4
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -228,14 +197,9 @@ tech_fe_fabricator_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -267,11 +231,6 @@ tech_fe_singularity_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_2
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -306,14 +265,9 @@ tech_fe_singularity_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -345,11 +299,6 @@ tech_fe_forge_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_5
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -384,14 +333,9 @@ tech_fe_forge_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -423,11 +367,6 @@ tech_fe_dome_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_1
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -462,14 +401,9 @@ tech_fe_dome_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -501,11 +435,6 @@ tech_fe_fortress_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_3
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -540,14 +469,9 @@ tech_fe_fortress_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -579,11 +503,6 @@ tech_fe_administration_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_3
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -618,14 +537,9 @@ tech_fe_administration_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -640,7 +554,7 @@ tech_fe_administration_2 = {
 	}
 }
 
-tech_fe_assembly_1 = { #Not for Hives
+tech_fe_assembly_1 = {
 	area = engineering
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -652,16 +566,20 @@ tech_fe_assembly_1 = { #Not for Hives
 
 	prerequisites = {
 		OR = {
-				tech_robomodding
-				tech_robomodding_m
-			}
+			tech_robomodding
+			tech_robomodding_m
+		}
     } 
         
 	weight_modifier = {
 		modifier = {
 			factor = 0
 			has_policy_flag = robots_outlawed
-		} 
+		}
+		modifier = {
+			factor = 0
+			is_hive_empire = yes
+		}
 		modifier = {
 			factor = 0
 			NOR = {
@@ -670,17 +588,8 @@ tech_fe_assembly_1 = { #Not for Hives
 			}
 		}
 		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
 			NOT = { has_crisis_level = crisis_cosmogenesis_level_4 }
-		}
-		modifier = {
-			factor = 0
-			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -700,7 +609,7 @@ tech_fe_assembly_1 = { #Not for Hives
 	}
 }
 
-tech_fe_assembly_2 = { #Not for Hives
+tech_fe_assembly_2 = {
 	area = engineering
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -716,17 +625,12 @@ tech_fe_assembly_2 = { #Not for Hives
 		modifier = {
 			factor = 0
 			has_policy_flag = robots_outlawed
-		} 
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -741,7 +645,7 @@ tech_fe_assembly_2 = { #Not for Hives
 	}
 }
 
-tech_fe_clinic_1 = { #Not for Machines
+tech_fe_clinic_1 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -754,23 +658,18 @@ tech_fe_clinic_1 = { #Not for Machines
 	weight_modifier = {
 		modifier = {
 			factor = 0
+			is_machine_empire = yes
+		}
+		modifier = {
+			factor = 0
 			NOR = {
 				has_crisis_level = crisis_cosmogenesis_level_4
 				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
 			NOT = { has_crisis_level = crisis_cosmogenesis_level_4 }
-		}
-		modifier = {
-			factor = 0
-			is_machine_empire = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -786,7 +685,7 @@ tech_fe_clinic_1 = { #Not for Machines
 	}
 }
 
-tech_fe_clinic_2 = { #Not for Machines
+tech_fe_clinic_2 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -801,14 +700,9 @@ tech_fe_clinic_2 = { #Not for Machines
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -840,11 +734,6 @@ tech_fe_security_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_1
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -879,14 +768,9 @@ tech_fe_security_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -901,7 +785,7 @@ tech_fe_security_2 = {
 	}
 }
 
-tech_fe_market_1 = { # Not for gestalt
+tech_fe_market_1 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -920,17 +804,8 @@ tech_fe_market_1 = { # Not for gestalt
 			}
 		}
 		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
 			NOT = { has_crisis_level = crisis_cosmogenesis_level_3 }
-		}
-		modifier = {
-			factor = 0
-			is_gestalt = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -961,14 +836,9 @@ tech_fe_market_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -1000,11 +870,6 @@ tech_fe_silo_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_1
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -1039,14 +904,9 @@ tech_fe_silo_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -1061,7 +921,7 @@ tech_fe_silo_2 = {
 	}
 }
 
-tech_fe_entertainment_1 = { # Not for gestalt
+tech_fe_entertainment_1 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -1074,23 +934,18 @@ tech_fe_entertainment_1 = { # Not for gestalt
 	weight_modifier = {
 		modifier = {
 			factor = 0
+			is_gestalt = yes
+		}
+		modifier = {
+			factor = 0
 			NOR = {
 				has_crisis_level = crisis_cosmogenesis_level_4
 				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
 			factor = @EnigmaticEngineeringDraw
 			NOT = { has_crisis_level = crisis_cosmogenesis_level_4 }
-		}
-		modifier = {
-			factor = 0
-			is_gestalt = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -1106,7 +961,7 @@ tech_fe_entertainment_1 = { # Not for gestalt
 	}
 }
 
-tech_fe_entertainment_2 = { # Not for gestalt
+tech_fe_entertainment_2 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -1121,14 +976,9 @@ tech_fe_entertainment_2 = { # Not for gestalt
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -1160,11 +1010,6 @@ tech_fe_lab_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_5
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -1199,14 +1044,9 @@ tech_fe_lab_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {
@@ -1238,11 +1078,6 @@ tech_fe_mine_1 = {
 				has_crisis_level = crisis_cosmogenesis_level_2
 				has_ascension_perk = ap_enigmatic_engineering
 			}
-		}
-		modifier = {
-			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
 		}
 		modifier = {
 			factor = @EnigmaticEngineeringDraw
@@ -1277,14 +1112,9 @@ tech_fe_mine_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_ascension_perk = ap_cosmogenesis }
-			trigger_AT_AR_CountMaxFeTechs = yes
-		}
-		modifier = {
-			factor = 0
 			NOR = {
-					has_ascension_perk = ap_cosmogenesis
-					has_ascension_perk = ap_enigmatic_engineering
+				has_ascension_perk = ap_cosmogenesis
+				has_ascension_perk = ap_enigmatic_engineering
 			}
 		}
 		modifier = {

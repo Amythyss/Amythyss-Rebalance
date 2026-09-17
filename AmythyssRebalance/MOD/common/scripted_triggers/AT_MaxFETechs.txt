@@ -1,3 +1,14 @@
+# CODED OUT OF FE TECHS, KEPT FOR SAFEKEEPING
+#
+# USAGE
+#
+# modifier = {
+#   factor = 0
+#   NOT = { has_ascension_perk = ap_cosmogenesis }
+#   trigger_AT_AR_CountMaxFeTechs = yes
+# }
+#
+
 trigger_AT_AR_CountMaxFeTechs = {
     calc_true_if = {
         amount >= 6

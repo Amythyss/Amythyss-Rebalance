@@ -37,6 +37,8 @@ country_event = {
 		give_technology = { tech = tech_cosmogenesis_escort message = no }
 		give_technology = { tech = tech_cosmogenesis_battlecruiser message = no }
 		give_technology = { tech = tech_cosmogenesis_FE_titan message = no }
+		give_technology = { tech = tech_fe_market_1 }						#Normally not available
+		give_technology = { tech = tech_fe_market_2 }						#Normally not available
 		if = {
 			limit = { is_hive_empire = no }
 			give_technology = { tech = tech_fe_assembly_1 }					#Did not remove the message to allow double-checking
@@ -49,8 +51,6 @@ country_event = {
 		}
 		if = {
 			limit = { is_gestalt = no }
-			give_technology = { tech = tech_fe_market_1 }					#Did not remove the message to allow double-checking
-			give_technology = { tech = tech_fe_market_2 }					#Did not remove the message to allow double-checking
 			give_technology = { tech = tech_fe_entertainment_1 }			#Did not remove the message to allow double-checking
 			give_technology = { tech = tech_fe_entertainment_2 }			#Did not remove the message to allow double-checking
 		}

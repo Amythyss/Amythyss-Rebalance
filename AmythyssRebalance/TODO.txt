@@ -1,3 +1,2 @@
-- ?		Add pop_jobs back
-- ?		Add removable habitats and rings
-- ?		Add agreement terms
+- ?		Add pop_jobs for servitor back
+- ?		Add dismantable habitats and rings

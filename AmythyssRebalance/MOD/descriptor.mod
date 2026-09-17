@@ -4,4 +4,4 @@ tags={
 	"Buildings"
 	"Technologies"
 }
-supported_version="v4.2.*"
+supported_version="v4.4.*"
