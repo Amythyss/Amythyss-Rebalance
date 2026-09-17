@@ -91,12 +91,7 @@ building_affluence_emporium = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_artisan_automated_workforce_mult = @fe_automation_specialist_1
 		job_artisan_drone_automated_workforce_mult = @fe_automation_specialist_1
@@ -233,12 +228,7 @@ building_affluence_center = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_artisan_automated_workforce_mult = @fe_automation_specialist_2
 		job_artisan_drone_automated_workforce_mult = @fe_automation_specialist_2
@@ -341,12 +331,7 @@ building_nourishment_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_farmer_automated_workforce_mult = @fe_automation_worker_1
 		job_agri_drone_automated_workforce_mult = @fe_automation_worker_1
@@ -485,12 +470,7 @@ building_nourishment_center = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_farmer_automated_workforce_mult = @fe_automation_worker_2
 		job_agri_drone_automated_workforce_mult = @fe_automation_worker_2
@@ -873,12 +853,7 @@ building_class_3_singularity = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_technician_automated_workforce_mult = @fe_automation_worker_1
 		job_technician_drone_automated_workforce_mult = @fe_automation_worker_1
@@ -1014,12 +989,7 @@ building_class_4_singularity = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_technician_automated_workforce_mult = @fe_automation_worker_2
 		job_technician_drone_automated_workforce_mult = @fe_automation_worker_2
@@ -1146,12 +1116,7 @@ building_micro_forge = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_foundry_automated_workforce_mult = @fe_automation_specialist_1
 		job_fabricator_automated_workforce_mult = @fe_automation_specialist_1
@@ -1286,12 +1251,7 @@ building_nano_forge = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_foundry_automated_workforce_mult = @fe_automation_specialist_2
 		job_fabricator_automated_workforce_mult = @fe_automation_specialist_2
@@ -1714,12 +1674,7 @@ building_fe_fortress = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_soldier_automated_workforce_mult = @fe_automation_specialist_1
 		job_warrior_drone_automated_workforce_mult = @fe_automation_specialist_1
@@ -1853,12 +1808,7 @@ building_fe_stronghold = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_soldier_automated_workforce_mult = @fe_automation_specialist_2
 		job_warrior_drone_automated_workforce_mult = @fe_automation_specialist_2
@@ -2037,12 +1987,7 @@ building_fe_administration_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
@@ -2200,12 +2145,7 @@ building_fe_administration_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -2349,12 +2289,7 @@ building_fe_administration_hive_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
@@ -2497,12 +2432,7 @@ building_fe_administration_hive_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -2645,12 +2575,7 @@ building_fe_administration_machine_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
@@ -2798,12 +2723,7 @@ building_fe_administration_machine_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -2941,12 +2861,7 @@ building_fe_temple_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
@@ -3098,12 +3013,7 @@ building_fe_temple_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -3294,12 +3204,7 @@ building_fe_assembly_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_roboticist_automated_workforce_mult = @fe_automation_specialist_1
 		job_replicator_automated_workforce_mult = @fe_automation_specialist_1
@@ -3463,12 +3368,7 @@ building_fe_assembly_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_roboticist_automated_workforce_mult = @fe_automation_specialist_2
 		job_replicator_automated_workforce_mult = @fe_automation_specialist_2
@@ -3657,12 +3557,7 @@ building_fe_clinic_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_spawning_drone_automated_workforce_mult = @fe_automation_specialist_1
 		job_healthcare_automated_workforce_mult = @fe_automation_specialist_1
@@ -3850,12 +3745,7 @@ building_fe_clinic_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_spawning_drone_automated_workforce_mult = @fe_automation_specialist_2
 		job_healthcare_automated_workforce_mult = @fe_automation_specialist_2
@@ -4334,12 +4224,7 @@ building_fe_market_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_trader_automated_workforce_mult = @fe_automation_specialist_1
 		job_logistics_drone_automated_workforce_mult = @fe_automation_specialist_1
@@ -4475,12 +4360,7 @@ building_fe_market_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_trader_automated_workforce_mult = @fe_automation_specialist_2
 		job_logistics_drone_automated_workforce_mult = @fe_automation_specialist_2
@@ -4881,12 +4761,7 @@ building_fe_entertainment_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_entertainer_automated_workforce_mult = @fe_automation_specialist_1
 	}
@@ -5020,12 +4895,7 @@ building_fe_entertainment_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_entertainer_automated_workforce_mult = @fe_automation_specialist_2
 	}
@@ -5154,11 +5024,9 @@ building_fe_lab_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+			owner? = {
+				is_gestalt = no
+				trigger_AR_GetsFeAutomation = Yes
 			}
 		}
 
@@ -5169,14 +5037,9 @@ building_fe_lab_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			owner? = {
 				is_gestalt = yes
-				is_wilderness_empire = no
-			}
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				trigger_AR_GetsFeAutomation = Yes
 			}
 		}
 
@@ -5318,11 +5181,9 @@ building_fe_lab_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+			owner? = {
+				is_gestalt = no
+				trigger_AR_GetsFeAutomation = Yes
 			}
 		}
 
@@ -5333,14 +5194,9 @@ building_fe_lab_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			owner? = {
 				is_gestalt = yes
-				is_wilderness_empire = no
-			}
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				trigger_AR_GetsFeAutomation = Yes
 			}
 		}
 
@@ -5452,12 +5308,7 @@ building_fe_mine_1 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_miner_automated_workforce_mult = @fe_automation_worker_1
 		job_mining_drone_automated_workforce_mult = @fe_automation_worker_1
@@ -5598,13 +5449,8 @@ building_fe_mine_2 = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_wilderness_empire = no }
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+		potential = { 
+			owner? = { trigger_AR_GetsFeAutomation = Yes }
 		}
 		job_miner_automated_workforce_mult = @fe_automation_worker_2
 		job_mining_drone_automated_workforce_mult = @fe_automation_worker_2

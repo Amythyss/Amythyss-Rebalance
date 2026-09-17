@@ -46,3 +46,13 @@ trigger_AR_CountMaxFeTechs = {
         has_technology = tech_fe_lab_2
     }
 }
+
+###
+
+trigger_AR_GetsFeAutomation = {
+    is_wilderness_empire = no
+    OR = {
+        is_country_type = fallen_empire
+        is_country_type = awakened_fallen_empire
+    }
+}
