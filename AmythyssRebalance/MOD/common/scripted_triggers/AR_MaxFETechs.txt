@@ -9,7 +9,7 @@
 # }
 #
 
-trigger_AT_AR_CountMaxFeTechs = {
+trigger_AR_CountMaxFeTechs = {
     calc_true_if = {
         amount >= 6
         has_technology = tech_fe_market_1
