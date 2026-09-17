@@ -1,2 +1,8 @@
+# GENERAL #
 - ?		Add pop_jobs for servitor back
 - ?		Add dismantable habitats and rings
+
+# GALCOM #
+- ?		Add Emperor being able to war subjects
+- ?		Add GalCom Crisis having a status quo
+- ?		Add Add Emperor retaining its identity

@@ -51,9 +51,7 @@ building_affluence_emporium = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -95,6 +93,10 @@ building_affluence_emporium = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_artisan_automated_workforce_mult = @fe_automation_specialist_1
 		job_artisan_drone_automated_workforce_mult = @fe_automation_specialist_1
@@ -122,9 +124,7 @@ building_affluence_emporium = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = affluence_emporium_build_count value = 1 }
@@ -138,9 +138,7 @@ building_affluence_emporium = {
 		}
 	}
 
-	upgrades = {
-		building_affluence_center
-	}
+	upgrades = { building_affluence_center }
 
 	show_in_tech = tech_fe_affluence_1
 }
@@ -192,15 +190,11 @@ building_affluence_center = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			consumer_goods = 35
-		}
+		produces = { consumer_goods = 35 }
 		cost = {
 			alloys = @fe_alloy_cost_2
 			sr_living_metal = @fe_rr_cost_2
@@ -230,9 +224,7 @@ building_affluence_center = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	planet_modifier = {
-		planet_amenities_add = 1000
-	}
+	planet_modifier = { planet_amenities_add = 1000 }
 
 	inline_script = {
 		script = jobs/factory_add
@@ -243,6 +235,10 @@ building_affluence_center = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_artisan_automated_workforce_mult = @fe_automation_specialist_2
 		job_artisan_drone_automated_workforce_mult = @fe_automation_specialist_2
@@ -270,9 +266,7 @@ building_affluence_center = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = affluence_emporium_upgrade_count value = 1 }
@@ -330,9 +324,7 @@ building_nourishment_complex = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	inline_script = {
 		script = jobs/farmers_add
@@ -351,6 +343,10 @@ building_nourishment_complex = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_farmer_automated_workforce_mult = @fe_automation_worker_1
 		job_agri_drone_automated_workforce_mult = @fe_automation_worker_1
@@ -358,9 +354,7 @@ building_nourishment_complex = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			food = 40
-		}
+		produces = { food = 40 }
 		cost = {
 			alloys = @fe_alloy_cost_1
 			exotic_gases = @fe_sr_cost_1
@@ -412,9 +406,7 @@ building_nourishment_complex = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = nourishment_complex_build_count value = 1 }
@@ -428,9 +420,7 @@ building_nourishment_complex = {
 		}
 	}
 
-	upgrades = {
-		building_nourishment_center
-	}
+	upgrades = { building_nourishment_center }
 
 	show_in_tech = tech_fe_nourishment_1
 }
@@ -476,13 +466,9 @@ building_nourishment_center = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
-	planet_modifier = {
-		pop_environment_tolerance = 0.05
-	}
+	planet_modifier = { pop_environment_tolerance = 0.05 }
 
 	inline_script = {
 		script = jobs/farmers_add
@@ -501,6 +487,10 @@ building_nourishment_center = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_farmer_automated_workforce_mult = @fe_automation_worker_2
 		job_agri_drone_automated_workforce_mult = @fe_automation_worker_2
@@ -508,9 +498,7 @@ building_nourishment_center = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			food = 150
-		}
+		produces = { food = 150 }
 		cost = {
 			alloys = @fe_alloy_cost_2
 			exotic_gases = @fe_sr_cost_2
@@ -562,9 +550,7 @@ building_nourishment_center = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = nourishment_complex_upgrade_count value = 1 }
@@ -629,9 +615,7 @@ building_dimensional_replicator = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -640,9 +624,7 @@ building_dimensional_replicator = {
 			exotic_gases = 10
 			volatile_motes = 10
 		}
-		cost = {
-			alloys = @fe_alloy_cost_1
-		}
+		cost = { alloys = @fe_alloy_cost_1 }
 		upkeep = {
 			alloys = @b3_alloy_upkeep
 			energy = @fe_energy_upkeep_3
@@ -689,9 +671,7 @@ building_dimensional_replicator = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = dimensional_replicator_build_count value = 1 }
@@ -705,9 +685,7 @@ building_dimensional_replicator = {
 		}
 	}
 
-	upgrades = {
-		building_dimensional_fabricator
-	}
+	upgrades = { building_dimensional_fabricator }
 
 	show_in_tech = tech_fe_fabricator_1
 }
@@ -760,9 +738,7 @@ building_dimensional_fabricator = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -775,9 +751,7 @@ building_dimensional_fabricator = {
 			sr_living_metal = 5
 			nanites = 5
 		}
-		cost = {
-			alloys = @fe_alloy_cost_2
-		}
+		cost = { alloys = @fe_alloy_cost_2 }
 		upkeep = {
 			alloys = @b4_alloy_upkeep
 			energy = @fe_energy_upkeep_5
@@ -824,9 +798,7 @@ building_dimensional_fabricator = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = dimensional_replicator_upgrade_count value = 1 }
@@ -884,9 +856,7 @@ building_class_3_singularity = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	inline_script = {
 		script = jobs/technicians_add
@@ -905,6 +875,10 @@ building_class_3_singularity = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_technician_automated_workforce_mult = @fe_automation_worker_1
 		job_technician_drone_automated_workforce_mult = @fe_automation_worker_1
@@ -920,9 +894,7 @@ building_class_3_singularity = {
 			alloys = @b2_alloy_upkeep
 			rare_crystals = @fe_sr_upkeep_1
 		}
-		produces = {
-			energy = 75
-		}
+		produces = { energy = 75 }
 		cost = {
 			trigger = {
 				owner = { is_wilderness_empire = yes }
@@ -965,9 +937,7 @@ building_class_3_singularity = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = class_3_singularity_build_count value = 1 }
@@ -981,9 +951,7 @@ building_class_3_singularity = {
 		}
 	}
 
-	upgrades = {
-		building_class_4_singularity
-	}
+	upgrades = { building_class_4_singularity }
 
 	show_in_tech = tech_fe_singularity_1
 }
@@ -1029,9 +997,7 @@ building_class_4_singularity = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	inline_script = {
 		script = jobs/technicians_add
@@ -1050,6 +1016,10 @@ building_class_4_singularity = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_technician_automated_workforce_mult = @fe_automation_worker_2
 		job_technician_drone_automated_workforce_mult = @fe_automation_worker_2
@@ -1065,9 +1035,7 @@ building_class_4_singularity = {
 			alloys = @b2_alloy_upkeep
 			rare_crystals = @fe_sr_upkeep_2
 		}
-		produces = {
-			energy = 200
-		}
+		produces = { energy = 200 }
 		cost = {
 			trigger = {
 				owner = { is_wilderness_empire = yes }
@@ -1110,9 +1078,7 @@ building_class_4_singularity = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = class_3_singularity_upgrade_count value = 1 }
@@ -1171,9 +1137,7 @@ building_micro_forge = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	inline_script = {
 		script = jobs/foundry_add
@@ -1184,6 +1148,10 @@ building_micro_forge = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_foundry_automated_workforce_mult = @fe_automation_specialist_1
 		job_fabricator_automated_workforce_mult = @fe_automation_specialist_1
@@ -1220,9 +1188,7 @@ building_micro_forge = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	upgrades = {
-		building_nano_forge
-	}
+	upgrades = { building_nano_forge }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -1246,9 +1212,7 @@ building_micro_forge = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = micro_forge_build_count value = 1 }
@@ -1311,13 +1275,9 @@ building_nano_forge = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
-	planet_modifier = {
-		planet_structures_upkeep_mult = -0.05
-	}
+	planet_modifier = { planet_structures_upkeep_mult = -0.05 }
 
 	inline_script = {
 		script = jobs/foundry_add
@@ -1328,6 +1288,10 @@ building_nano_forge = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_foundry_automated_workforce_mult = @fe_automation_specialist_2
 		job_fabricator_automated_workforce_mult = @fe_automation_specialist_2
@@ -1335,9 +1299,7 @@ building_nano_forge = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			alloys = 25
-		}
+		produces = { alloys = 25 }
 		cost = {
 			alloys = @fe_alloy_cost_2
 			sr_living_metal = @fe_rr_cost_2
@@ -1389,9 +1351,7 @@ building_nano_forge = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = micro_forge_upgrade_count value = 1 }
@@ -1452,9 +1412,7 @@ building_fe_sky_dome = {
 	}
 
 	destroy_trigger = {
-		owner? = {
-			has_country_flag = forever_cruise_over
-		}
+		owner? = { has_country_flag = forever_cruise_over }
 	}
 
 	planet_modifier = {
@@ -1539,9 +1497,7 @@ building_fe_sky_dome = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_sky_dome_build_count value = 1 }
@@ -1555,9 +1511,7 @@ building_fe_sky_dome = {
 		}
 	}
 
-	upgrades = {
-		building_fe_dome
-	}
+	upgrades = { building_fe_dome }
 
 	show_in_tech = tech_fe_dome_1
 }
@@ -1606,9 +1560,7 @@ building_fe_dome = {
 	}
 
 	destroy_trigger = {
-		owner? = {
-			has_country_flag = forever_cruise_over
-		}
+		owner? = { has_country_flag = forever_cruise_over }
 	}
 
 	planet_modifier = {
@@ -1695,9 +1647,7 @@ building_fe_dome = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_sky_dome_upgrade_count value = 1 }
@@ -1755,9 +1705,7 @@ building_fe_fortress = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	inline_script = {
 		script = jobs/soldiers_add
@@ -1768,6 +1716,10 @@ building_fe_fortress = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_soldier_automated_workforce_mult = @fe_automation_specialist_1
 		job_warrior_drone_automated_workforce_mult = @fe_automation_specialist_1
@@ -1804,9 +1756,7 @@ building_fe_fortress = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	upgrades = {
-		building_fe_stronghold
-	}
+	upgrades = { building_fe_stronghold }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -1830,9 +1780,7 @@ building_fe_fortress = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_fortress_build_count value = 1 }
@@ -1894,9 +1842,7 @@ building_fe_stronghold = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	planetary_ftl_inhibitor = yes
 
@@ -1909,14 +1855,16 @@ building_fe_stronghold = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_soldier_automated_workforce_mult = @fe_automation_specialist_2
 		job_warrior_drone_automated_workforce_mult = @fe_automation_specialist_2
 	}
 
-	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.1
-	}
+	planet_modifier = { planet_orbital_bombardment_damage = -0.1 }
 
 	resources = {
 		category = planet_buildings
@@ -1971,9 +1919,7 @@ building_fe_stronghold = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_fortress_upgrade_count value = 1 }
@@ -2093,14 +2039,16 @@ building_fe_administration_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_administration_2
-	}
+	upgrades = { building_fe_administration_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -2124,9 +2072,7 @@ building_fe_administration_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_1_build_count value = 1 }
@@ -2230,9 +2176,7 @@ building_fe_administration_2 = {
 			biomass = @b3_biomass
 		}
 
-		produces = {
-			unity = 20
-		}
+		produces = { unity = 20 }
 	}
 
 	triggered_planet_modifier = {
@@ -2247,9 +2191,7 @@ building_fe_administration_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	planet_modifier = {
-		pop_housing_usage_mult = -0.1
-	}
+	planet_modifier = { pop_housing_usage_mult = -0.1 }
 
 	inline_script = {
 		script = jobs/unity_jobs_add
@@ -2260,6 +2202,10 @@ building_fe_administration_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -2287,9 +2233,7 @@ building_fe_administration_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_1_upgrade_count value = 1 }
@@ -2327,9 +2271,7 @@ building_fe_administration_hive_1 = {
 
 	potential = {
 		exists = owner
-		owner = {
-			is_hive_empire = yes
-		}
+		owner = { is_hive_empire = yes }
 		owner = {
 			OR = {
 				is_fallen_empire = yes
@@ -2409,14 +2351,16 @@ building_fe_administration_hive_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_administration_hive_2
-	}
+	upgrades = { building_fe_administration_hive_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -2440,9 +2384,7 @@ building_fe_administration_hive_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_hive_1_build_count value = 1 }
@@ -2458,9 +2400,7 @@ building_fe_administration_hive_1 = {
 
 	show_in_tech = tech_fe_administration_1
 
-	show_tech_unlock_if = {
-		is_hive_empire = yes
-	}
+	show_tech_unlock_if = { is_hive_empire = yes }
 }
 
 building_fe_administration_hive_2 = {
@@ -2476,9 +2416,7 @@ building_fe_administration_hive_2 = {
 
 	potential = {
 		exists = owner
-		owner = {
-			is_hive_empire = yes
-		}
+		owner = { is_hive_empire = yes }
 		owner = {
 			OR = {
 				is_fallen_empire = yes
@@ -2509,9 +2447,7 @@ building_fe_administration_hive_2 = {
 
 	destroy_trigger = {
 		exists = owner
-		owner = {
-			is_hive_empire = no
-		}
+		owner = { is_hive_empire = no }
 	}
 
 	convert_to = {
@@ -2537,9 +2473,7 @@ building_fe_administration_hive_2 = {
 			}
 			biomass = @b3_biomass
 		}
-		produces = {
-			unity = 20
-		}
+		produces = { unity = 20 }
 	}
 
 	triggered_planet_modifier = {
@@ -2554,9 +2488,7 @@ building_fe_administration_hive_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	planet_modifier = {
-		pop_housing_usage_mult = -0.1
-	}
+	planet_modifier = { pop_housing_usage_mult = -0.1 }
 
 	inline_script = {
 		script = jobs/unity_jobs_add
@@ -2567,6 +2499,10 @@ building_fe_administration_hive_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -2594,9 +2530,7 @@ building_fe_administration_hive_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_hive_1_upgrade_count value = 1 }
@@ -2612,9 +2546,7 @@ building_fe_administration_hive_2 = {
 
 	show_in_tech = tech_fe_administration_2
 
-	show_tech_unlock_if = {
-		is_hive_empire = yes
-	}
+	show_tech_unlock_if = { is_hive_empire = yes }
 }
 
 building_fe_administration_machine_1 = {
@@ -2715,14 +2647,16 @@ building_fe_administration_machine_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_administration_machine_2
-	}
+	upgrades = { building_fe_administration_machine_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -2746,9 +2680,7 @@ building_fe_administration_machine_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_machine_1_build_count value = 1 }
@@ -2764,9 +2696,7 @@ building_fe_administration_machine_1 = {
 
 	show_in_tech = tech_fe_administration_1
 
-	show_tech_unlock_if = {
-		is_machine_empire = yes
-	}
+	show_tech_unlock_if = { is_machine_empire = yes }
 }
 
 building_fe_administration_machine_2 = {
@@ -2817,9 +2747,7 @@ building_fe_administration_machine_2 = {
 
 	destroy_trigger = {
 		exists = owner
-		owner = {
-			is_machine_empire = no
-		}
+		owner = { is_machine_empire = no }
 	}
 
 	convert_to = {
@@ -2846,9 +2774,7 @@ building_fe_administration_machine_2 = {
 			biomass = @b3_biomass
 		}
 
-		produces = {
-			unity = 20
-		}
+		produces = { unity = 20 }
 	}
 
 	triggered_planet_modifier = {
@@ -2863,9 +2789,7 @@ building_fe_administration_machine_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	planet_modifier = {
-		pop_housing_usage_mult = -0.1
-	}
+	planet_modifier = { pop_housing_usage_mult = -0.1 }
 
 	inline_script = {
 		script = jobs/unity_jobs_add
@@ -2876,6 +2800,10 @@ building_fe_administration_machine_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -2903,9 +2831,7 @@ building_fe_administration_machine_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_machine_1_upgrade_count value = 1 }
@@ -2921,9 +2847,7 @@ building_fe_administration_machine_2 = {
 
 	show_in_tech = tech_fe_administration_2
 
-	show_tech_unlock_if = {
-		is_machine_empire = yes
-	}
+	show_tech_unlock_if = { is_machine_empire = yes }
 }
 
 building_fe_temple_1 = {
@@ -3019,14 +2943,16 @@ building_fe_temple_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_1
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_temple_2
-	}
+	upgrades = { building_fe_temple_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -3050,9 +2976,7 @@ building_fe_temple_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_1_build_count value = 1 }
@@ -3123,9 +3047,7 @@ building_fe_temple_2 = {
 
 	destroy_trigger = {
 		exists = owner
-		owner = {
-			is_spiritualist = no
-		}
+		owner = { is_spiritualist = no }
 	}
 
 	convert_to = {
@@ -3152,9 +3074,7 @@ building_fe_temple_2 = {
 			biomass = @b3_biomass
 		}
 
-		produces = {
-			unity = 25
-		}
+		produces = { unity = 25 }
 	}
 
 	triggered_planet_modifier = {
@@ -3169,9 +3089,7 @@ building_fe_temple_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	planet_modifier = {
-		pop_housing_usage_mult = -0.1
-	}
+	planet_modifier = { pop_housing_usage_mult = -0.1 }
 
 	inline_script = {
 		script = jobs/priests_add
@@ -3182,6 +3100,10 @@ building_fe_temple_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_bureaucrat_automated_workforce_mult = @fe_automation_specialist_2
 		job_coordinator_automated_workforce_mult = @fe_automation_specialist_2
@@ -3209,9 +3131,7 @@ building_fe_temple_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_administration_1_upgrade_count value = 1 }
@@ -3258,9 +3178,7 @@ building_fe_assembly_1 = {
 					is_materialist = yes
 				}
 			}
-			owner = {
-				is_machine_empire = yes
-			}
+			owner = { is_machine_empire = yes }
 		}
 
 		owner = {
@@ -3345,33 +3263,23 @@ building_fe_assembly_1 = {
 					has_country_flag = synthetic_empire
 				}
 			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 200
-		}
+		modifier = { auto_mod_monthly_add = 200 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_country_flag = synth_unscheduled_updates
-			}
+			owner = { has_country_flag = synth_unscheduled_updates }
 		}
-		modifier = {
-			planet_pop_assembly_mult = 0.1
-		}
+		modifier = { planet_pop_assembly_mult = 0.1 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_country_flag = synth_safe_updates
-			}
+			owner = { has_country_flag = synth_safe_updates }
 		}
 		modifier = {
 			planet_pop_assembly_mult = -0.1
@@ -3388,6 +3296,10 @@ building_fe_assembly_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_roboticist_automated_workforce_mult = @fe_automation_specialist_1
 		job_replicator_automated_workforce_mult = @fe_automation_specialist_1
@@ -3396,16 +3308,10 @@ building_fe_assembly_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			owner = { is_machine_empire = yes }
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 200
-		}
+		modifier = { auto_mod_monthly_add = 200 }
 	}
 
 	on_queued = {
@@ -3430,9 +3336,7 @@ building_fe_assembly_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_assembly_1_build_count value = 1 }
@@ -3446,9 +3350,7 @@ building_fe_assembly_1 = {
 		}
 	}
 
-	upgrades = {
-		building_fe_assembly_2
-	}
+	upgrades = { building_fe_assembly_2 }
 
 	show_in_tech = tech_fe_assembly_1
 }
@@ -3476,9 +3378,7 @@ building_fe_assembly_2 = {
 					is_materialist = yes
 				}
 			}
-			owner = {
-				is_machine_empire = yes
-			}
+			owner = { is_machine_empire = yes }
 		}
 		owner = {
 			OR = {
@@ -3565,6 +3465,10 @@ building_fe_assembly_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_roboticist_automated_workforce_mult = @fe_automation_specialist_2
 		job_replicator_automated_workforce_mult = @fe_automation_specialist_2
@@ -3580,33 +3484,23 @@ building_fe_assembly_2 = {
 					has_country_flag = synthetic_empire
 				}
 			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 500
-		}
+		modifier = { auto_mod_monthly_add = 500 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_country_flag = synth_unscheduled_updates
-			}
+			owner = { has_country_flag = synth_unscheduled_updates }
 		}
-		modifier = {
-			planet_pop_assembly_mult = 0.1
-		}
+		modifier = { planet_pop_assembly_mult = 0.1 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_country_flag = synth_safe_updates
-			}
+			owner = { has_country_flag = synth_safe_updates }
 		}
 		modifier = {
 			planet_pop_assembly_mult = -0.1
@@ -3617,16 +3511,10 @@ building_fe_assembly_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			owner = { is_machine_empire = yes }
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 500
-		}
+		modifier = { auto_mod_monthly_add = 500 }
 	}
 
 	on_queued = {
@@ -3651,9 +3539,7 @@ building_fe_assembly_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_assembly_1_upgrade_count value = 1 }
@@ -3754,9 +3640,7 @@ building_fe_clinic_1 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	country_modifier = {
-		leader_lifespan_add = 1
-	}
+	country_modifier = { leader_lifespan_add = 1 }
 
 	inline_script = {
 		script = jobs/spawning_drone_add
@@ -3766,19 +3650,19 @@ building_fe_clinic_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
+			owner = { is_regular_empire = yes }
 		}
-		modifier = {
-			job_healthcare_add = 150
-		}
+		modifier = { job_healthcare_add = 150 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_spawning_drone_automated_workforce_mult = @fe_automation_specialist_1
 		job_healthcare_automated_workforce_mult = @fe_automation_specialist_1
@@ -3787,31 +3671,19 @@ building_fe_clinic_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_technology = tech_gene_tailoring
-			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			owner = { has_technology = tech_gene_tailoring }
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 400
-		}
+		modifier = { auto_mod_monthly_add = 400 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				game_start_auto_mod_empire = yes
-			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			owner = { game_start_auto_mod_empire = yes }
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 400
-		}
+		modifier = { auto_mod_monthly_add = 400 }
 	}
 
 	triggered_planet_modifier = {
@@ -3828,9 +3700,7 @@ building_fe_clinic_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_purity_heightened_attributes_tradition = yes
-			}
+			owner = { has_purity_heightened_attributes_tradition = yes }
 		}
 		organic_pop_bonus_workforce_mult = @medical_workforce_mult
 	}
@@ -3857,9 +3727,7 @@ building_fe_clinic_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_clinic_1_build_count value = 1 }
@@ -3873,9 +3741,7 @@ building_fe_clinic_1 = {
 		}
 	}
 
-	upgrades = {
-		building_fe_clinic_2
-	}
+	upgrades = { building_fe_clinic_2 }
 
 	show_in_tech = tech_fe_clinic_1
 }
@@ -3967,9 +3833,7 @@ building_fe_clinic_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	country_modifier = {
-		leader_lifespan_add = 2
-	}
+	country_modifier = { leader_lifespan_add = 2 }
 
 	inline_script = {
 		script = jobs/spawning_drone_add
@@ -3979,19 +3843,19 @@ building_fe_clinic_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
+			owner = { is_regular_empire = yes }
 		}
-		modifier = {
-			job_healthcare_add = 300
-		}
+		modifier = { job_healthcare_add = 300 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_spawning_drone_automated_workforce_mult = @fe_automation_specialist_2
 		job_healthcare_automated_workforce_mult = @fe_automation_specialist_2
@@ -4000,31 +3864,19 @@ building_fe_clinic_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_technology = tech_gene_tailoring
-			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			owner = { has_technology = tech_gene_tailoring }
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 600
-		}
+		modifier = { auto_mod_monthly_add = 600 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				game_start_auto_mod_empire = yes
-			}
-			any_owned_pop_group = {
-				has_auto_modding_trait = yes
-			}
+			owner = { game_start_auto_mod_empire = yes }
+			any_owned_pop_group = { has_auto_modding_trait = yes }
 		}
-		modifier = {
-			auto_mod_monthly_add = 600
-		}
+		modifier = { auto_mod_monthly_add = 600 }
 	}
 
 	triggered_planet_modifier = {
@@ -4042,9 +3894,7 @@ building_fe_clinic_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_purity_heightened_attributes_tradition = yes
-			}
+			owner = { has_purity_heightened_attributes_tradition = yes }
 		}
 		organic_pop_bonus_workforce_mult = @medical_workforce_mult
 		mult = 2
@@ -4072,9 +3922,7 @@ building_fe_clinic_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_clinic_1_upgrade_count value = 1 }
@@ -4112,9 +3960,7 @@ building_fe_security_1 = {
 				has_country_flag = fe_security_1_can_build
 			}
 		}
-		NOT = {
-			has_modifier = resort_colony
-		}
+		NOT = { has_modifier = resort_colony }
 	}
 
 	allow = {
@@ -4131,9 +3977,7 @@ building_fe_security_1 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -4174,9 +4018,7 @@ building_fe_security_1 = {
 				is_fallen_empire = yes
 			}
 		}
-		modifier = {
-			job_fe_protector_add = @fe_jobs
-		}
+		modifier = { job_fe_protector_add = @fe_jobs }
 	}
 
 	inline_script = {
@@ -4198,18 +4040,12 @@ building_fe_security_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
+			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			job_patrol_drone_add = @fe_jobs
-		}
+		modifier = { job_patrol_drone_add = @fe_jobs }
 	}
 
-	upgrades = {
-		building_fe_security_2
-	}
+	upgrades = { building_fe_security_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -4233,9 +4069,7 @@ building_fe_security_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_security_1_build_count value = 1 }
@@ -4272,9 +4106,7 @@ building_fe_security_2 = {
 				has_country_flag = fe_security_1_can_build
 			}
 		}
-		NOT = {
-			has_modifier = resort_colony
-		}
+		NOT = { has_modifier = resort_colony }
 	}
 
 	allow = {
@@ -4291,9 +4123,7 @@ building_fe_security_2 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -4326,32 +4156,22 @@ building_fe_security_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	country_modifier = {
-		country_edict_fund_add = 10
+	country_modifier = { country_edict_fund_add = 10 }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = { planet_crime_add = -40 }
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
+			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			planet_crime_add = -40
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			planet_crime_no_happiness_add = -40
-		}
+		modifier = { planet_crime_no_happiness_add = -40 }
 	}
 
 	triggered_planet_modifier = {
@@ -4362,9 +4182,7 @@ building_fe_security_2 = {
 				is_fallen_empire = yes
 			}
 		}
-		modifier = {
-			job_fe_protector_add = @fe_jobs
-		}
+		modifier = { job_fe_protector_add = @fe_jobs }
 	}
 
 	inline_script = {
@@ -4386,13 +4204,9 @@ building_fe_security_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
+			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			job_patrol_drone_add = @fe_jobs
-		}
+		modifier = { job_patrol_drone_add = @fe_jobs }
 	}
 
 	on_queued = {
@@ -4417,9 +4231,7 @@ building_fe_security_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_security_1_upgrade_count value = 1 }
@@ -4524,14 +4336,16 @@ building_fe_market_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_trader_automated_workforce_mult = @fe_automation_specialist_1
 		job_logistics_drone_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_market_2
-	}
+	upgrades = { building_fe_market_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -4555,9 +4369,7 @@ building_fe_market_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_market_1_build_count value = 1 }
@@ -4665,25 +4477,23 @@ building_fe_market_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_trader_automated_workforce_mult = @fe_automation_specialist_2
 		job_logistics_drone_automated_workforce_mult = @fe_automation_specialist_2
 	}
 
-	country_modifier = {
-		country_trade_produces_mult = 0.01
-	}
+	country_modifier = { country_trade_produces_mult = 0.01 }
 
-	planet_modifier = {
-		planet_traders_trade_produces_add = 0.5
-	}
+	planet_modifier = { planet_traders_trade_produces_add = 0.5 }
 
 	triggered_country_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_megacorp = yes
-			}
+			owner = { is_megacorp = yes }
 		}
 		branch_office_value_mult = 0.05
 	}
@@ -4710,9 +4520,7 @@ building_fe_market_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_market_1_upgrade_count value = 1 }
@@ -4773,9 +4581,7 @@ building_fe_silo_1 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -4814,16 +4620,12 @@ building_fe_silo_1 = {
 
 	triggered_country_modifier = {
 		potential = {
-			owner? = {
-				is_nomadic = yes
-			}
+			owner? = { is_nomadic = yes }
 		}
 		situation_nomad_economy_max_progress_add = 2500
 	}
 
-	upgrades = {
-		building_fe_silo_2
-	}
+	upgrades = { building_fe_silo_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -4847,9 +4649,7 @@ building_fe_silo_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_silo_1_build_count value = 1 }
@@ -4921,9 +4721,7 @@ building_fe_silo_2 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -4950,9 +4748,7 @@ building_fe_silo_2 = {
 
 	triggered_country_modifier = {
 		potential = {
-			owner? = {
-				is_nomadic = yes
-			}
+			owner? = { is_nomadic = yes }
 		}
 		situation_nomad_economy_max_progress_add = 5000
 	}
@@ -4979,9 +4775,7 @@ building_fe_silo_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_silo_1_upgrade_count value = 1 }
@@ -5089,13 +4883,15 @@ building_fe_entertainment_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_entertainer_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_entertainment_2
-	}
+	upgrades = { building_fe_entertainment_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -5119,9 +4915,7 @@ building_fe_entertainment_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_entertainment_1_build_count value = 1 }
@@ -5217,9 +5011,7 @@ building_fe_entertainment_2 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	planet_modifier = {
-		planet_amenities_add = 5000
-	}
+	planet_modifier = { planet_amenities_add = 5000 }
 
 	inline_script = {
 		script = jobs/entertainers_add
@@ -5230,6 +5022,10 @@ building_fe_entertainment_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_entertainer_automated_workforce_mult = @fe_automation_specialist_2
 	}
@@ -5256,9 +5052,7 @@ building_fe_entertainment_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_entertainment_1_upgrade_count value = 1 }
@@ -5320,9 +5114,7 @@ building_fe_lab_1 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -5364,6 +5156,10 @@ building_fe_lab_1 = {
 		potential = {
 			exists = owner
 			owner = { is_gestalt = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 
 		job_physicist_automated_workforce_mult = @fe_automation_specialist_1
@@ -5378,6 +5174,10 @@ building_fe_lab_1 = {
 				is_gestalt = yes
 				is_wilderness_empire = no
 			}
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 
 		job_calculator_physicist_automated_workforce_mult = @fe_automation_specialist_1
@@ -5385,9 +5185,7 @@ building_fe_lab_1 = {
 		job_calculator_engineer_automated_workforce_mult = @fe_automation_specialist_1
 	}
 
-	upgrades = {
-		building_fe_lab_2
-	}
+	upgrades = { building_fe_lab_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -5411,9 +5209,7 @@ building_fe_lab_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_lab_1_build_count value = 1 }
@@ -5478,9 +5274,7 @@ building_fe_lab_2 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	resources = {
 		category = planet_buildings
@@ -5526,6 +5320,10 @@ building_fe_lab_2 = {
 		potential = {
 			exists = owner
 			owner = { is_gestalt = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 
 		job_physicist_automated_workforce_mult = @fe_automation_specialist_2
@@ -5539,6 +5337,10 @@ building_fe_lab_2 = {
 			owner = {
 				is_gestalt = yes
 				is_wilderness_empire = no
+			}
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
 			}
 		}
 
@@ -5569,9 +5371,7 @@ building_fe_lab_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_lab_1_upgrade_count value = 1 }
@@ -5631,9 +5431,7 @@ building_fe_mine_1 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -5656,6 +5454,10 @@ building_fe_mine_1 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_miner_automated_workforce_mult = @fe_automation_worker_1
 		job_mining_drone_automated_workforce_mult = @fe_automation_worker_1
@@ -5678,9 +5480,7 @@ building_fe_mine_1 = {
 			}
 			biomass = @b3_biomass
 		}
-		produces = {
-			minerals = 50
-		}
+		produces = { minerals = 50 }
 	}
 
 	triggered_planet_modifier = {
@@ -5695,9 +5495,7 @@ building_fe_mine_1 = {
 		planet_decision_enact_speed_mult = 0.03
 	}
 
-	upgrades = {
-		building_fe_mine_2
-	}
+	upgrades = { building_fe_mine_2 }
 
 	on_queued = {
 		if = { # kill on the same planet
@@ -5721,9 +5519,7 @@ building_fe_mine_1 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_mine_1_build_count value = 1 }
@@ -5782,9 +5578,7 @@ building_fe_mine_2 = {
 		}
 	}
 
-	destroy_trigger = {
-		always = no
-	}
+	destroy_trigger = { always = no }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -5807,6 +5601,10 @@ building_fe_mine_2 = {
 		potential = {
 			exists = owner
 			owner = { is_wilderness_empire = no }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
 		}
 		job_miner_automated_workforce_mult = @fe_automation_worker_2
 		job_mining_drone_automated_workforce_mult = @fe_automation_worker_2
@@ -5829,9 +5627,7 @@ building_fe_mine_2 = {
 			}
 			biomass = @b3_biomass
 		}
-		produces = {
-			minerals = 150
-		}
+		produces = { minerals = 150 }
 	}
 
 	triggered_planet_modifier = {
@@ -5868,9 +5664,7 @@ building_fe_mine_2 = {
 		}
 		else_if = {
 			limit = { is_variable_set = local_spent_biomass }
-			owner = {
-				global_biomass_spender = yes
-			}
+			owner = { global_biomass_spender = yes }
 		}
 		owner = {
 			subtract_variable = { which = fe_mine_1_upgrade_count value = 1 }
