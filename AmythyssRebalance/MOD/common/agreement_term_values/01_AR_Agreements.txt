@@ -1,0 +1,285 @@
+# WARS #
+
+joins_overlord_wars_none = {
+	term = joins_overlord_wars
+	activate_effect = { set_rule_join_overlord_wars = none }
+	deactivate_effect = { set_rule_join_overlord_wars = none }
+}
+
+joins_overlord_wars_defensive = {
+	term = joins_overlord_wars
+	loyalty_change = -10
+	ai_acceptance = {
+		overlord = 60
+		subject = -50
+	}
+	triggered_loyalty_change = {
+		trigger = {
+			target = { is_pacifist = yes }
+		}
+		loyalty_change = -10
+		ai_acceptance = { subject = -50 }
+	}
+	activate_effect = { set_rule_join_overlord_wars = defensive }
+	deactivate_effect = { set_rule_join_overlord_wars = none }
+	target_modifier = { monthly_loyalty = -1 }
+}
+
+joins_overlord_wars_offensive = {
+	term = joins_overlord_wars
+	loyalty_change = -20
+	ai_acceptance = {
+		overlord = 120
+		subject = -100
+	}
+	triggered_loyalty_change = {
+		trigger = {
+			target = { is_pacifist = yes }
+		}
+		loyalty_change = -20
+		ai_acceptance = { subject = -100 }
+	}
+	activate_effect = { set_rule_join_overlord_wars = offensive }
+	deactivate_effect = { set_rule_join_overlord_wars = none }
+	target_modifier = { monthly_loyalty = -2 }
+}
+
+joins_overlord_wars_all = {
+	term = joins_overlord_wars
+	loyalty_change = -30
+	ai_acceptance = {
+		overlord = 180
+		subject = -150
+	}
+	triggered_loyalty_change = {
+		trigger = {
+			target = { is_pacifist = yes }
+		}
+		loyalty_change = -30
+		ai_acceptance = { subject = -150 }
+	}
+	activate_effect = { set_rule_join_overlord_wars = all }
+	deactivate_effect = { set_rule_join_overlord_wars = none }
+	target_modifier = { monthly_loyalty = -3 }
+}
+
+joins_subject_wars_none = {
+	term = joins_subject_wars
+	loyalty_change = -10
+	ai_acceptance = {
+		overlord = 60
+		subject = -50
+	}
+	activate_effect = { set_rule_join_subject_wars = none }
+	deactivate_effect = { set_rule_join_subject_wars = none }
+}
+
+joins_subject_wars_defensive = {
+	term = joins_subject_wars
+	loyalty_change = 5
+	ai_acceptance = {
+		overlord = -30
+		subject = 25
+	}
+	activate_effect = { set_rule_join_subject_wars = defensive }
+	deactivate_effect = { set_rule_join_subject_wars = none }
+	target_modifier = { monthly_loyalty = 0.5 }
+}
+
+joins_subject_wars_offensive = {
+	term = joins_subject_wars
+	loyalty_change = 10
+	ai_acceptance = {
+		overlord = -60
+		subject = 50
+	}
+	activate_effect = { set_rule_join_subject_wars = offensive }
+	deactivate_effect = { set_rule_join_subject_wars = none }
+	target_modifier = { monthly_loyalty = 1 }
+}
+
+joins_subject_wars_all = {
+	term = joins_subject_wars
+	loyalty_change = 15
+	ai_acceptance = {
+		overlord = -90
+		subject = 75
+	}
+	activate_effect = { set_rule_join_subject_wars = all }
+	deactivate_effect = { set_rule_join_subject_wars = none }
+	target_modifier = { monthly_loyalty = 1.5 }
+}
+
+# DIPLOMACY #
+
+subject_can_not_do_diplomacy = {
+	term = subject_diplomacy
+	loyalty_change = -15
+	ai_acceptance = {
+		overlord = 90
+		subject = -75
+	}
+	activate_effect = {
+		set_rule_can_subject_vote = no
+		set_rule_can_subject_do_diplomacy = no
+	}
+	target_modifier = { monthly_loyalty = -1 }
+}
+
+subject_can_do_diplomacy_but_not_vote = {
+	term = subject_diplomacy
+	loyalty_change = -5
+	ai_acceptance = {
+		overlord = 30
+		subject = -25
+	}
+	activate_effect = {
+		set_rule_can_subject_vote = no
+		set_rule_can_subject_do_diplomacy = yes
+	}
+}
+
+subject_can_do_diplomacy = {
+	term = subject_diplomacy
+	loyalty_change = 5
+	ai_acceptance = {
+		overlord = -30
+		subject = 25
+	}
+	activate_effect = {
+		set_rule_can_subject_vote = yes
+		set_rule_can_subject_do_diplomacy = yes
+	}
+	target_modifier = { monthly_loyalty = 0.5 }
+}
+
+# EXPAND #
+
+subject_cannot_expand = {
+	term = subject_expand
+	loyalty_change = -15
+	ai_acceptance = {
+		overlord = 90
+		subject = -75
+	}
+	activate_effect = { set_rule_can_subject_expand = cannot_expand }
+	target_modifier = { monthly_loyalty = -1 }
+}
+
+subject_can_expand_with_tithe = {
+	loyalty_change = -5
+	ai_acceptance = {
+		overlord = 30
+		subject = -25
+	}
+	term = subject_expand
+	activate_effect = { set_rule_can_subject_expand = can_expand_with_tithe }
+	triggered_desc = {
+		trigger = {
+           	target = { is_nomadic = no }
+		}
+        text = "subject_can_expand_with_tithe_desc"
+    }
+	triggered_desc = {
+       	trigger = {
+           	target = { is_nomadic = yes }
+		}
+		text = "subject_can_expand_with_tithe_nomadic_desc"
+    }
+}
+
+subject_can_expand = {
+	term = subject_expand
+	loyalty_change = 5
+	ai_acceptance = {
+		overlord = -30
+		subject = 25
+	}
+	activate_effect = { set_rule_can_subject_expand = can_expand }
+	target_modifier = { monthly_loyalty = 0.5 }
+}
+
+# HOLDINGS #
+
+subject_holdings_limit_0 = {
+	term = subject_holdings_limit
+	target_modifier = { planet_max_subject_holding_buildings_add = 0 }
+}
+
+subject_holdings_limit_1 = {
+	term = subject_holdings_limit
+	loyalty_change = -5
+	ai_acceptance = {
+		overlord = 30
+		subject = -25
+	}
+	target_modifier = {
+		monthly_loyalty = -0.4
+		planet_max_subject_holding_buildings_add = 1
+	}
+}
+
+subject_holdings_limit_2 = {
+	term = subject_holdings_limit
+	loyalty_change = -15
+	ai_acceptance = {
+		overlord = 90
+		subject = -75
+	}
+	target_modifier = {
+		monthly_loyalty = -1
+		planet_max_subject_holding_buildings_add = 2
+	}
+	potential = { has_overlord_dlc = yes }
+}
+
+subject_holdings_limit_3 = {
+	term = subject_holdings_limit
+	loyalty_change = -30
+	ai_acceptance = {
+		overlord = 180
+		subject = -150
+	}
+	target_modifier = {
+		monthly_loyalty = -2
+		planet_max_subject_holding_buildings_add = 3
+	}
+	potential = { has_overlord_dlc = yes }
+}
+
+subject_holdings_limit_4 = {
+	term = subject_holdings_limit
+	loyalty_change = -50
+	ai_acceptance = {
+		overlord = 300
+		subject = -250
+	}
+	target_modifier = {
+		monthly_loyalty = -4
+		planet_max_subject_holding_buildings_add = 4
+	}
+	potential = { has_overlord_dlc = yes }
+}
+
+# SENSORS #
+
+subject_does_not_get_sensors = {
+	term = subject_sensors
+	loyalty_change = -5
+	ai_acceptance = {
+		overlord = 10
+		subject = -5
+	}
+	activate_effect = { set_rule_subject_has_sensors = no }
+}
+
+subject_gets_sensors = {
+	term = subject_sensors
+	loyalty_change = 0
+	ai_acceptance = {
+		overlord = -10
+		subject = 5
+	}
+	activate_effect = { set_rule_subject_has_sensors = yes }
+	target_modifier = { monthly_loyalty = 0.25 }
+}

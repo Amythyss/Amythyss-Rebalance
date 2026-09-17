@@ -1,0 +1,4 @@
+defined_text = {
+    name = AT_AR_OM_GetGeneTherapyConversionRate
+    value = value:AT_AR_OM_country_pop_gene_therapy_conversion
+}

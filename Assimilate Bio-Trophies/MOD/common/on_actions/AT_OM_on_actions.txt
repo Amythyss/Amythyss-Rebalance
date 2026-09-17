@@ -1,0 +1,3 @@
+on_yearly_pulse_country = {
+	events = { event_AT_AR_OM_merge.1 }
+}

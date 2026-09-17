@@ -1,0 +1,6 @@
+# replace_scopes = { this = country }
+# this calculation is triggered by the event itself
+AT_AR_OM_country_pop_gene_therapy_conversion = {
+    base = @AT_AR_OM_country_pop_gene_therapy_conversion_base
+    add = modifier:AT_AR_OM_country_pop_gene_therapy_conversion_add
+}

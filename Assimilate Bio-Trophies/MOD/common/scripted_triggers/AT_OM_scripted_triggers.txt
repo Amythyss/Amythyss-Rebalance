@@ -1,0 +1,13 @@
+# replace_scopes = { this = species prev = country }
+AT_AR_OM_species_is_valid_bio_trophy_merge_target = {
+	has_citizenship_type = {
+		type = citizenship_organic_trophy
+		country = prev
+	}
+	NOT = {
+		has_living_standard = {
+			type = LivingStandard_AT_AR_OM_TrophyMerge
+			country = prev
+		}
+	}
+}

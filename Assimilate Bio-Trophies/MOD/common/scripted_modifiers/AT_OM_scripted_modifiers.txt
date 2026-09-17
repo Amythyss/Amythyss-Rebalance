@@ -1,0 +1,6 @@
+AT_AR_OM_country_pop_gene_therapy_conversion_add = {
+	icon = mod_bonus_pop_growth
+	good = yes
+	max_decimals = 0
+	category = country
+}

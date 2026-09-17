@@ -1,0 +1,29 @@
+tech_AT_AR_OM_MergeMoreTrophies = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { biology }
+	levels = -1
+	prerequisites = { "tech_gene_tailoring" }
+	
+	weight = @repeatableTechWeight
+	weight_modifier = { factor = @repatableTechFactor }
+	ai_weight = { factor = 1.0 }
+	weight_groups = { repeatable }
+	mod_weight_if_group_picked = { repeatable = 0.01 }
+
+	potential = { has_valid_civic = civic_machine_servitor }
+
+	modifier = { 
+		AT_AR_OM_country_pop_gene_therapy_conversion_add = @AT_AR_OM_country_pop_gene_therapy_conversion_add
+	}
+	
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "unlock_AT_AR_OM_MergeMoreTrophies_desc"
+			desc = "unlock_AT_AR_OM_MergeMoreTrophies_desc"
+		}
+	}
+}

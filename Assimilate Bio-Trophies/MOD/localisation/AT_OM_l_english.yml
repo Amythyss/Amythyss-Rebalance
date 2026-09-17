@@ -1,0 +1,12 @@
+﻿﻿l_english:
+ LivingStandard_AT_AR_OM_TrophyMerge: "Mandatory Gene-Therapy"
+ LivingStandard_AT_AR_OM_TrophyMerge_tooltip: "These $pop_cat_bio_trophy_plural$ were deemed \"aesthetically deficient\" by their machine keepers. In addition to relentless pampering, they undergo mandatory genetic therapy so that their appearance and abilities eventually match those of their masters' creators."
+ LivingStandard_AT_AR_OM_TrophyMerge_tooltip_delayed: "§LYou'll be so much cuter after gene-therapy and a relaxing bath!§!"
+ LivingStandard_AT_AR_OM_TrophyMerge_modifier_custom_tooltip: "Base £pop£ §HPops§! conversion rate: §Y[from.AT_AR_OM_GetGeneTherapyConversionRate] §! §g(This amount has a chance to be doubled or quadrupled) §!"
+ species_at_least_one_primary_bio_trophy: "$TRIGGER_FAIL$Must have at least one §Y$citizenship_organic_trophy$§! species not undergoing gene-therapy."
+ GROWTH_CAT_GENE_THERAPY: "$LivingStandard_AT_AR_OM_TrophyMerge$"
+ mod_AT_AR_OM_country_pop_gene_therapy_conversion_add: "$LivingStandard_AT_AR_OM_TrophyMerge$ Base Conversion Rate"
+
+ tech_AT_AR_OM_MergeMoreTrophies: "Improved Genetic Manipulation"
+ tech_AT_AR_OM_MergeMoreTrophies_desc: "Thanks to our deepening knowledge of Genetic Manipulation we are able to modify genes even more efficiently. Effectively allowing us to treat a larger amount of $pop_cat_bio_trophy_plural$."
+ unlock_AT_AR_OM_MergeMoreTrophies_desc: "Allows us to assimilate more $pop_cat_bio_trophy_plural$ into the primary $citizenship_organic_trophy$ species."

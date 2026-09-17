@@ -1,0 +1,123 @@
+namespace = event_AT_AR_OM_merge
+
+country_event = {
+	id = event_AT_AR_OM_merge.1
+	hide_window = yes
+	is_triggered_only = yes
+    trigger = {
+        # Are there any pops to merge?
+        any_owned_species = {
+            has_living_standard = {
+                type = LivingStandard_AT_AR_OM_TrophyMerge
+                country = root
+            }
+        }
+    }
+    immediate = {
+        # Select Main Biotrophy species (to exclude)
+        random_owned_species = {
+            limit = { AT_AR_OM_species_is_valid_bio_trophy_merge_target = yes }
+            save_event_target_as = EventTarget_AT_AR_OM_MainTrophySpecies
+        }
+
+        # If all bio-trophies undergo gene-therapy, convert one with most pops from it  
+        if = {
+            limit = {
+                NOT = { exists = event_target:EventTarget_AT_AR_OM_MainTrophySpecies }
+            }
+            ordered_owned_species = {
+                limit = {
+                    has_living_standard = {
+                        type = LivingStandard_AT_AR_OM_TrophyMerge
+                        country = root
+                    }
+                }
+                position = 0
+                order_by = trigger:pop_amount
+                set_living_standard = {
+                    type = living_standard_organic_trophy
+                    country = root
+                    cooldown = no
+                }
+                save_event_target_as = EventTarget_AT_AR_OM_MainTrophySpecies
+            }
+        }
+
+		every_owned_colony = {
+			limit = {
+				any_owned_species = {
+					has_living_standard = {
+						type = LivingStandard_AT_AR_OM_TrophyMerge
+						country = root
+					}
+				}
+			}
+            set_variable = {
+                which = variable_AT_AR_OM_MergeMaximum
+                value = root.value:AT_AR_OM_country_pop_gene_therapy_conversion
+            }
+			random_list = {
+                # 300 * x + 300 pops
+                1 = {}
+                # 600 * x + 600 pops
+                1 = {
+                    multiply_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 2
+                    }
+                }
+                # 1200 * x + 1200 pops
+                1 = {
+                    multiply_variable = {
+                        which = variable_AT_AR_OM_MergeMaximum
+                        value = 4
+                    }
+                }
+			}
+			# pick a species to merge
+			while = {
+				count = variable_AT_AR_OM_MergeMaximum
+				limit = {
+					check_variable = {
+						which = variable_AT_AR_OM_MergeMaximum
+						value > 0
+					}
+					any_owned_pop_group = {
+						has_living_standard = {
+							type = LivingStandard_AT_AR_OM_TrophyMerge
+							country = root
+						}
+					}
+				}
+				# similar to assimilation, this prefers to process as many of the same species as possible before re-randomizing
+				weighted_random_owned_pop_group = {
+					limit = {
+						has_living_standard = {
+							type = LivingStandard_AT_AR_OM_TrophyMerge
+							country = root
+						}
+					}
+					species = { save_event_target_as = EventTarget_AT_AR_OM_MergingSpecies }
+					MergePops = {}
+					colony = {
+						#pick a pop to merge within above species
+						while = {
+							limit = {
+								check_variable = {
+									which = variable_AT_AR_OM_MergeMaximum
+									value > 0
+								}
+								any_owned_pop_group = { is_exact_same_species = event_target:EventTarget_AT_AR_OM_MergingSpecies }
+							}
+							weighted_random_owned_pop_group = {
+								limit = { is_exact_same_species = event_target:EventTarget_AT_AR_OM_MergingSpecies }
+								MergePops = {}
+							}
+						}
+					}
+				}
+			}
+			clear_variable = variable_AT_AR_OM_MergeMaximum
+		}
+	}
+}
