@@ -1,4 +1,4 @@
-namespace = event_AT_handy
+namespace = event_AR_handy
 
 country_event = {
 	id = event_AR_handy.1
