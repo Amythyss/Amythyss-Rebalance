@@ -37,6 +37,7 @@ country_event = {
 		give_technology = { tech = tech_cosmogenesis_escort message = no }
 		give_technology = { tech = tech_cosmogenesis_battlecruiser message = no }
 		give_technology = { tech = tech_cosmogenesis_FE_titan message = no }
+		give_technology = { tech = tech_cloaking_dark_matter message = np }
 		give_technology = { tech = tech_fe_market_1 }						#Normally not available
 		give_technology = { tech = tech_fe_market_2 }						#Normally not available
 		if = {
@@ -56,3 +57,42 @@ country_event = {
 		}
 	}
 }
+
+#ONLY RUN WHEN PLAYING AS GRAY TEMPEST
+country_event = {
+	id = event_AR_handy.2
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_megastructure = {
+            limit = {
+                is_megastructure_type = lgate_base
+                solar_system = {
+                    NOR = {
+                        has_star_flag = lcluster_lgate
+                        has_star_flag = lgate_originating_system
+                    }
+                }
+            }
+            create_fleet = {
+                name = "NAME_Tempest_Fleet"
+                effect = {
+                    set_owner = FROM
+                    create_graygoo_ships_1 = yes
+                    set_formation_scale = 2
+                    set_fleet_stance = aggressive
+                    set_aggro_range_measure_from = self
+                    set_aggro_range = 250
+                    set_location = {
+                        target = prev
+                        distance = 0
+                        angle = 0
+                    }
+                }
+            }
+        }
+	}
+}
+
