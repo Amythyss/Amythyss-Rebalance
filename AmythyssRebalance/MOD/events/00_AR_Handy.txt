@@ -37,7 +37,7 @@ country_event = {
 		give_technology = { tech = tech_cosmogenesis_escort message = no }
 		give_technology = { tech = tech_cosmogenesis_battlecruiser message = no }
 		give_technology = { tech = tech_cosmogenesis_FE_titan message = no }
-		give_technology = { tech = tech_cloaking_dark_matter message = np }
+		give_technology = { tech = tech_cloaking_dark_matter message = no }
 		give_technology = { tech = tech_fe_market_1 }						#Normally not available
 		give_technology = { tech = tech_fe_market_2 }						#Normally not available
 		if = {
