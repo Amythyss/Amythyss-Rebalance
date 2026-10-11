@@ -1388,7 +1388,7 @@ building_fe_sky_dome = {
 			}
 		}
 		job_bio_trophy_add = 5000
-		job_artisan_drone_add = 10
+		job_artisan_drone_add = 900
 	}
 
 	triggered_planet_modifier = {
@@ -1538,7 +1538,7 @@ building_fe_dome = {
 			}
 		}
 		job_bio_trophy_add = 10000
-		job_artisan_drone_add = 15
+		job_artisan_drone_add = 1800
 	}
 
 	triggered_planet_modifier = {
